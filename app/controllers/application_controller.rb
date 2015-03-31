@@ -6,4 +6,5 @@ class ApplicationController < ActionController::Base
   def home
   	render text: "Some Text at Home Page, What a start"
   end
+   
 end
