@@ -11,6 +11,15 @@
 	<div class="container">
 		<%= yield %>
 	<%= render "layouts/footer" %>
-	</div>
+	
+	<!-- This line only show at dev mod it's shows the params at page visiting-->
+	<!-- changing env in Rails: -->
+	<!-- rails console test -->
+	<!-- rails server --environment production -->
+	<!-- bundle exec rake db:migrate RAILS_ENV = production -->
+
+	<%= debug(params) if Rails.env.development? %>
+
+	</div> 
 </body>
 </html>

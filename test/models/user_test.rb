@@ -3,7 +3,7 @@ require 'test_helper'
 class UserTest < ActiveSupport::TestCase
  	def setup
  		@user = User.new(name: "TestU1", email: "testu1@email.com",
- 						 password: "test", password_confirmation: "test")
+ 						 password: "1234567", password_confirmation: "1234567")
  	end
 
  	test "should be valid" do 
@@ -43,7 +43,7 @@ class UserTest < ActiveSupport::TestCase
   	    end
   	end
 
-  	test "email addresses should be unique can case sensative" do
+  	test "email addresses should be unique and case sensative" do
   	  duplicate_user = @user.dup
   	  @user.save
 
