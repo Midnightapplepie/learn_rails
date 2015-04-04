@@ -1,0 +1,19 @@
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<!-- method by the paginate gem-->
+<%= will_paginate %>
+
+<ul class="users">
+  <% @users.each do |user| %>
+    <%= render user %>
+  <% end %>
+</ul>
+
+<!--This would work too!! direct render on @user
+<ul class="users">
+  <%= render @users %>
+</ul>
+-->
+
+<%= will_paginate %>
